@@ -10,8 +10,8 @@ Using software engineering methodology that employs `object oriented` principles
 ___
 # Key Aspects
 - Aspects of OOAD
-- [OO analysis](oo-design.md)
-- oo design
+- [OO analysis](oo-analysis.md)
+- [oo design](oo-design.md)
 - advantages of OO analysis and design `OOAD`
 - real world applications
 ___
