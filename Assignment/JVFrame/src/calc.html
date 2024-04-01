@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+        <html>
+        <head>
+            <meta charset="UTF-8">
+            <title>Author</title>
+            <style>
+/* From extension vscode.github */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+.vscode-dark img[src$=\#gh-light-mode-only],
+.vscode-light img[src$=\#gh-dark-mode-only],
+.vscode-high-contrast:not(.vscode-high-contrast-light) img[src$=\#gh-light-mode-only],
+.vscode-high-contrast-light img[src$=\#gh-dark-mode-only] {
+	display: none;
+}
+
+</style>
+            
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+<style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        <style>
+.task-list-item {
+    list-style-type: none;
+}
+
+.task-list-item-checkbox {
+    margin-left: -20px;
+    vertical-align: middle;
+    pointer-events: none;
+}
+</style>
+<style>
+:root {
+  --color-note: #0969da;
+  --color-tip: #1a7f37;
+  --color-warning: #9a6700;
+  --color-severe: #bc4c00;
+  --color-caution: #d1242f;
+  --color-important: #8250df;
+}
+
+</style>
+<style>
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-note: #2f81f7;
+    --color-tip: #3fb950;
+    --color-warning: #d29922;
+    --color-severe: #db6d28;
+    --color-caution: #f85149;
+    --color-important: #a371f7;
+  }
+}
+
+</style>
+<style>
+.markdown-alert {
+  padding: 0.5rem 1rem;
+  margin-bottom: 16px;
+  color: inherit;
+  border-left: .25em solid #888;
+}
+
+.markdown-alert>:first-child {
+  margin-top: 0
+}
+
+.markdown-alert>:last-child {
+  margin-bottom: 0
+}
+
+.markdown-alert .markdown-alert-title {
+  display: flex;
+  font-weight: 500;
+  align-items: center;
+  line-height: 1
+}
+
+.markdown-alert .markdown-alert-title .octicon {
+  margin-right: 0.5rem;
+  display: inline-block;
+  overflow: visible !important;
+  vertical-align: text-bottom;
+  fill: currentColor;
+}
+
+.markdown-alert.markdown-alert-note {
+  border-left-color: var(--color-note);
+}
+
+.markdown-alert.markdown-alert-note .markdown-alert-title {
+  color: var(--color-note);
+}
+
+.markdown-alert.markdown-alert-important {
+  border-left-color: var(--color-important);
+}
+
+.markdown-alert.markdown-alert-important .markdown-alert-title {
+  color: var(--color-important);
+}
+
+.markdown-alert.markdown-alert-warning {
+  border-left-color: var(--color-warning);
+}
+
+.markdown-alert.markdown-alert-warning .markdown-alert-title {
+  color: var(--color-warning);
+}
+
+.markdown-alert.markdown-alert-tip {
+  border-left-color: var(--color-tip);
+}
+
+.markdown-alert.markdown-alert-tip .markdown-alert-title {
+  color: var(--color-tip);
+}
+
+.markdown-alert.markdown-alert-caution {
+  border-left-color: var(--color-caution);
+}
+
+.markdown-alert.markdown-alert-caution .markdown-alert-title {
+  color: var(--color-caution);
+}
+
+</style>
+        
+        </head>
+        <body class="vscode-body vscode-light">
+            <h1 id="author">Author</h1>
+<p>Daniel Nzambuli
+665721</p>
+<h2 id="program-code">Program Code</h2>
+<pre><code class="language-java"><span class="hljs-keyword">import</span> javax.swing.*;
+<span class="hljs-keyword">import</span> java.awt.*;
+<span class="hljs-keyword">import</span> javax.swing.table.DefaultTableModel;
+<span class="hljs-keyword">import</span> java.awt.event.ActionEvent;
+<span class="hljs-keyword">import</span> java.awt.event.ActionListener;
+
+<span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Calculator</span> <span class="hljs-keyword">extends</span> <span class="hljs-title class_">JFrame</span>{
+
+    <span class="hljs-comment">// private Jframe frame;</span>
+    <span class="hljs-keyword">private</span> JTextField num1, num2, num3;
+    <span class="hljs-keyword">private</span> JButton calculate;
+    <span class="hljs-keyword">private</span> JTable results;
+    <span class="hljs-keyword">public</span> <span class="hljs-title function_">Calculator</span><span class="hljs-params">()</span>{
+        <span class="hljs-comment">// Create input fields</span>
+        <span class="hljs-type">JLabel</span> <span class="hljs-variable">num1Label</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">JLabel</span>(<span class="hljs-string">&quot;Num a:&quot;</span>);
+        <span class="hljs-type">JLabel</span> <span class="hljs-variable">num2Label</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">JLabel</span>(<span class="hljs-string">&quot;Num b:&quot;</span>);
+        <span class="hljs-type">JLabel</span> <span class="hljs-variable">num3Label</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">JLabel</span>(<span class="hljs-string">&quot;Num c:&quot;</span>);
+        num1 = <span class="hljs-keyword">new</span> <span class="hljs-title class_">JTextField</span>(<span class="hljs-number">10</span>);
+        num2 = <span class="hljs-keyword">new</span> <span class="hljs-title class_">JTextField</span>(<span class="hljs-number">10</span>);
+        num3 = <span class="hljs-keyword">new</span> <span class="hljs-title class_">JTextField</span>(<span class="hljs-number">10</span>);
+
+        <span class="hljs-comment">// Create button</span>
+        calculate = <span class="hljs-keyword">new</span> <span class="hljs-title class_">JButton</span>(<span class="hljs-string">&quot;Calculate&quot;</span>);
+        calculate.addActionListener(<span class="hljs-keyword">new</span> <span class="hljs-title class_">ActionListener</span>() {
+            <span class="hljs-meta">@Override</span>
+            <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">actionPerformed</span><span class="hljs-params">(ActionEvent e)</span> {
+                calculate();
+            }
+        });
+
+        <span class="hljs-comment">// Create table</span>
+        results = <span class="hljs-keyword">new</span> <span class="hljs-title class_">JTable</span>(<span class="hljs-keyword">new</span> <span class="hljs-title class_">DefaultTableModel</span>(
+                <span class="hljs-keyword">new</span> <span class="hljs-title class_">Object</span>[]{<span class="hljs-string">&quot;Three Numbers&quot;</span>, <span class="hljs-string">&quot;Sum&quot;</span>, <span class="hljs-string">&quot;Multiplication&quot;</span>}, <span class="hljs-number">0</span>));
+
+        <span class="hljs-comment">// Add components to the frame</span>
+        <span class="hljs-type">JPanel</span> <span class="hljs-variable">inputPanel</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">JPanel</span>(<span class="hljs-keyword">new</span> <span class="hljs-title class_">GridLayout</span>(<span class="hljs-number">3</span>, <span class="hljs-number">2</span>));
+        inputPanel.add(num1Label);
+        inputPanel.add(num1);
+        inputPanel.add(num2Label);
+        inputPanel.add(num2);
+        inputPanel.add(num3Label);
+        inputPanel.add(num3);
+
+        <span class="hljs-type">JPanel</span> <span class="hljs-variable">buttonPanel</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">JPanel</span>();
+        buttonPanel.add(calculate);
+
+        getContentPane().setLayout(<span class="hljs-keyword">new</span> <span class="hljs-title class_">BorderLayout</span>());
+        getContentPane().add(inputPanel, BorderLayout.NORTH);
+        getContentPane().add(<span class="hljs-keyword">new</span> <span class="hljs-title class_">JScrollPane</span>(results), BorderLayout.CENTER);
+        getContentPane().add(buttonPanel, BorderLayout.SOUTH);
+    }
+
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">calculate</span><span class="hljs-params">()</span> {
+        <span class="hljs-keyword">try</span> {
+            <span class="hljs-comment">// Get input values</span>
+            <span class="hljs-type">double</span> <span class="hljs-variable">a</span> <span class="hljs-operator">=</span> Double.parseDouble(num1.getText());
+            <span class="hljs-type">double</span> <span class="hljs-variable">b</span> <span class="hljs-operator">=</span> Double.parseDouble(num2.getText());
+            <span class="hljs-type">double</span> <span class="hljs-variable">c</span> <span class="hljs-operator">=</span> Double.parseDouble(num3.getText());
+
+            <span class="hljs-comment">// Calculate sum and multiplication</span>
+            <span class="hljs-type">double</span> <span class="hljs-variable">sum</span> <span class="hljs-operator">=</span> a + b + c;
+            <span class="hljs-type">double</span> <span class="hljs-variable">multiplication</span> <span class="hljs-operator">=</span> a * b * c;
+
+            <span class="hljs-comment">// Update table model</span>
+            <span class="hljs-type">String</span> <span class="hljs-variable">numbers</span> <span class="hljs-operator">=</span> a + <span class="hljs-string">&quot;, &quot;</span> + b + <span class="hljs-string">&quot;, &quot;</span> + c;
+            <span class="hljs-type">DefaultTableModel</span> <span class="hljs-variable">model</span> <span class="hljs-operator">=</span> (DefaultTableModel) results.getModel();
+            model.setRowCount(<span class="hljs-number">0</span>);
+            model.addRow(<span class="hljs-keyword">new</span> <span class="hljs-title class_">Object</span>[]{numbers , sum, multiplication});
+        } <span class="hljs-keyword">catch</span> (NumberFormatException e) {
+            JOptionPane.showMessageDialog(<span class="hljs-built_in">this</span>, <span class="hljs-string">&quot;Please enter valid numbers.&quot;</span>);
+        }
+    }
+
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> {
+        SwingUtilities.invokeLater(<span class="hljs-keyword">new</span> <span class="hljs-title class_">Runnable</span>() {
+            <span class="hljs-meta">@Override</span>
+            <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">run</span><span class="hljs-params">()</span> {
+                <span class="hljs-keyword">new</span> <span class="hljs-title class_">Calculator</span>().setVisible(<span class="hljs-literal">true</span>);
+            }
+        });
+    }
+}
+</code></pre>
+<h2 id="program-output-generated">Program Output Generated</h2>
+<p><img src="file:///c:\Users\ADMIN\OneDrive\Documents\OO design and analysis\Assignment\JVFrame\src\image.png" alt="img"></p>
+
+            
+            
+        </body>
+        </html>

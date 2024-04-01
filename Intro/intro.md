@@ -95,3 +95,46 @@ They use the keyword `final` to indicate unchangeable
 final float gravity = 9.81; // the constant of gravity on earth
 ```
 
+## Printing and Declaring Variables
+
+System.out.println() allows for printing of all outputs
+
+```java
+int a, b, c;
+a = b = c = 50; // all the variables are equated to 50
+```
+
+## Primitive Data Types
+|Data Type|Size|Description|
+|:----|:---:|:-----|
+|byte|1 byte|Stores whole numbers from `-128 to 127`|
+|short|	2 bytes|Stores whole numbers from `-32,768 to 32,767`|
+|int|4 bytes|Stores whole numbers from `-2,147,483,648 to 2,147,483,647`|
+|long|8 bytes|Stores whole numbers from `-9,223,372,036,854,775,808 to 9,223,372,036,854,775,807`|
+|float|4 bytes|Stores fractional numbers. Sufficient for storing `6 to 7 decimal digits`|
+|double|8 bytes|Stores fractional numbers. Sufficient for storing `15 decimal digits`|
+|boolean|1 bit|Stores true or false values|
+|char|2 bytes|Stores a single character/letter or ASCII values|
+
+## Type Casting
+
+### Widening Casting
+
+This is casting a smaller size type to a larger size type 
+
+`byte` -> `short` -> `char` -> `int` -> `long` -> `float` -> `double`
+
+```java
+short myInt = 9;
+double larger = myInt; // outputs 9.0
+```
+
+### Narrow Casting
+
+Converting larger types to a smaller type
+
+```java
+double myDouble = 9.78d;
+int myInt = (int) myDouble; // outputs 9 
+```
+
